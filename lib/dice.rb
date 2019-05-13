@@ -19,8 +19,9 @@
 # I want to get the result of each dice roll
 
 class Dice
-  def roll
-    return [1, 6].sample
+  def roll(num_dice = 1)
+    return [1, 6].sample if num_dice == 1
+    return []
   end
 
 end
