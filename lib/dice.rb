@@ -17,3 +17,10 @@
 # As a board game player,
 # So that I know what my score was when I rolled several dice
 # I want to get the result of each dice roll
+
+class Dice
+  def roll
+    return 0
+  end
+
+end
