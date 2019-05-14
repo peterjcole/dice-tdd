@@ -20,8 +20,18 @@
 
 class Dice
   def roll(num_dice = 1)
-    return [1, 6].sample if num_dice == 1
-    return []
+    return single_roll if num_dice == 1
+    dice = []
+    num_dice.times { dice.push(single_roll) }
+    return dice
+  end
+
+  def single_roll
+    return rand(1..6)
+  end
+
+  def roll_sum(num_dice = 1)
+    return num_dice * single_roll
   end
 
 end
